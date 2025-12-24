@@ -12,7 +12,7 @@ const Button = React.forwardRef(({
 
   const variants = {
     default: "bg-primary text-white hover:bg-primary/90",
-    outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+    outline: "border border-input bg-transparent hover:bg-accent hover:text-accent-foreground",
     ghost: "hover:bg-accent hover:text-accent-foreground",
     link: "text-primary underline-offset-4 hover:underline",
   };
@@ -24,16 +24,44 @@ const Button = React.forwardRef(({
     icon: "h-10 w-10",
   };
 
-  const Component = asChild ? 'span' : 'button';
+  // Check if className contains custom bg/text colors - if so, skip variant colors
+  const hasCustomBg = className.includes('bg-');
+  const hasCustomText = className.includes('text-');
+
+  // Only apply variant styles if no custom colors are provided
+  let variantStyles = variants[variant] || '';
+  if (hasCustomBg || hasCustomText) {
+    // Remove bg and text classes from variant if custom ones are provided
+    variantStyles = variantStyles
+      .split(' ')
+      .filter(cls => {
+        if (hasCustomBg && cls.startsWith('bg-')) return false;
+        if (hasCustomText && cls.startsWith('text-')) return false;
+        if (hasCustomBg && cls.startsWith('hover:bg-')) return false;
+        return true;
+      })
+      .join(' ');
+  }
+
+  const combinedClassName = `${baseStyles} ${variantStyles} ${sizes[size]} ${className}`;
+
+  // When asChild is true, clone the child element and pass all props/styles to it
+  if (asChild && React.isValidElement(children)) {
+    return React.cloneElement(children, {
+      className: `${combinedClassName} ${children.props.className || ''}`.trim(),
+      ref,
+      ...props,
+    });
+  }
 
   return (
-    <Component
-      className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`}
+    <button
+      className={combinedClassName}
       ref={ref}
       {...props}
     >
       {children}
-    </Component>
+    </button>
   );
 });
 
