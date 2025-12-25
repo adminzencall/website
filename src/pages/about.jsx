@@ -209,7 +209,7 @@ export default function About() {
                   className="bg-white text-blue-600 hover:bg-blue-50 rounded-xl px-8 h-11 font-semibold"
                   asChild
                 >
-                  <a href="https://calendly.com/admin-zencall/30min" target="_blank" rel="noopener noreferrer">
+                  <a href="https://calendly.com/admin-zencall" target="_blank" rel="noopener noreferrer">
                     Book a Demo
                   </a>
                 </Button>

@@ -25,20 +25,22 @@ export default function Contact() {
 
     try {
       await SendEmail({
-        to: "hello@zencall.com",
+        to: "admin@zencall.ca",
+        from_name: formData.name,
+        from_email: formData.email,
         subject: `New Contact Form Submission from ${formData.name}`,
         body: `
-          New contact form submission:
-          
-          Name: ${formData.name}
-          Email: ${formData.email}
-          Company: ${formData.company}
-          Phone: ${formData.phone}
-          Business Type: ${formData.businessType}
-          
-          Message:
-          ${formData.message}
-        `
+New contact form submission:
+
+Name: ${formData.name}
+Email: ${formData.email}
+Company: ${formData.company || 'Not provided'}
+Phone: ${formData.phone || 'Not provided'}
+Business Type: ${formData.businessType || 'Not selected'}
+
+Message:
+${formData.message || 'No message provided'}
+        `.trim()
       });
 
       setSubmitted(true);

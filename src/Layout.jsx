@@ -158,7 +158,7 @@ export default function Layout({ children, currentPageName }) {
                 className="border-[#355DFF] text-[#355DFF] hover:bg-[#355DFF]/10 hover:scale-105 hover:shadow-[0_0_20px_rgba(53,93,255,0.3)] rounded-full px-5 h-10 transition-all duration-200"
                 asChild
               >
-                <a href="https://calendly.com/admin-zencall/30min" target="_blank" rel="noopener noreferrer">Book a Demo</a>
+                <a href="https://calendly.com/admin-zencall" target="_blank" rel="noopener noreferrer">Book a Demo</a>
               </Button>
               <Button 
                 className="bg-gradient-to-r from-[#355DFF] to-[#5A7CFF] text-white hover:opacity-90 hover:scale-105 hover:shadow-[0_0_30px_rgba(53,93,255,0.4)] rounded-full px-6 h-10 font-medium transition-all duration-200"
@@ -204,7 +204,7 @@ export default function Layout({ children, currentPageName }) {
                   className="w-full border-[#355DFF] text-[#355DFF] rounded-full"
                   asChild
                 >
-                  <a href="https://calendly.com/admin-zencall/30min" target="_blank" rel="noopener noreferrer">Book a Demo</a>
+                  <a href="https://calendly.com/admin-zencall" target="_blank" rel="noopener noreferrer">Book a Demo</a>
                 </Button>
                 <Button 
                   className="w-full bg-gradient-to-r from-[#355DFF] to-[#5A7CFF] text-white rounded-full"

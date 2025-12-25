@@ -153,7 +153,7 @@ export default function Pricing() {
                       }`}
                       asChild
                     >
-                      <a href="https://calendly.com/admin-zencall/30min" target="_blank" rel="noopener noreferrer">
+                      <a href="https://calendly.com/admin-zencall" target="_blank" rel="noopener noreferrer">
                         Book a Demo
                       </a>
                     </Button>
@@ -245,7 +245,7 @@ export default function Pricing() {
               className="bg-white text-[#355DFF] hover:bg-slate-50 rounded-xl px-10 h-11 font-semibold"
               asChild
             >
-              <a href="https://calendly.com/admin-zencall/30min" target="_blank" rel="noopener noreferrer">
+              <a href="https://calendly.com/admin-zencall" target="_blank" rel="noopener noreferrer">
                 Book a Demo
                 <ArrowRight className="w-4 h-4 ml-2" />
               </a>

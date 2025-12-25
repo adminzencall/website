@@ -234,7 +234,7 @@ export default function Services() {
                   className="bg-[#355DFF] hover:bg-[#2F4FCC] text-white rounded-xl px-8 h-11"
                   asChild
                 >
-                  <a href="https://calendly.com/admin-zencall/30min" target="_blank" rel="noopener noreferrer">
+                  <a href="https://calendly.com/admin-zencall" target="_blank" rel="noopener noreferrer">
                     Book a Demo
                   </a>
                 </Button>

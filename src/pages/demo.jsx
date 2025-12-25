@@ -167,7 +167,7 @@ export default function Demo() {
                 className="bg-white text-[#355DFF] hover:bg-white/90 rounded-full px-8 h-11 font-semibold"
                 asChild
               >
-                <a href="https://calendly.com/admin-zencall/30min" target="_blank" rel="noopener noreferrer">
+                <a href="https://calendly.com/admin-zencall" target="_blank" rel="noopener noreferrer">
                   Book a Demo
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </a>
@@ -178,7 +178,7 @@ export default function Demo() {
                 className="border-2 border-white text-white hover:bg-white/10 rounded-full px-8 h-11 font-semibold"
                 asChild
               >
-                <a href="https://calendly.com/admin-zencall/30min" target="_blank" rel="noopener noreferrer">
+                <a href="https://calendly.com/admin-zencall" target="_blank" rel="noopener noreferrer">
                   Get Started
                 </a>
               </Button>

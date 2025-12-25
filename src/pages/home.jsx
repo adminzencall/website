@@ -211,7 +211,7 @@ export default function Home() {
                   className="bg-white text-[#355DFF] hover:bg-white/90 rounded-full px-8 h-11 text-[15px] font-medium"
                   asChild
                 >
-                  <a href="https://calendly.com/admin-zencall/30min" target="_blank" rel="noopener noreferrer">Book a Demo</a>
+                  <a href="https://calendly.com/admin-zencall" target="_blank" rel="noopener noreferrer">Book a Demo</a>
                 </Button>
                 <Button 
                   size="lg"
